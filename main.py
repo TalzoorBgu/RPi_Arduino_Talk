@@ -102,8 +102,9 @@ def read_key():
 if __name__ == '__main__':
     print("---Started---")
     try:
-        print("---here---")
+
         thread.start_new_thread(input_thread, ())  # ADDED
+        print("---here---")
         i = 0
         flag_first_time = True
         while True:  # loop
