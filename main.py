@@ -58,10 +58,11 @@ command = SendCommand(0, 1, 2)
 
 
 def main():
-    print("---here---")
+
     s = MySerial("/dev/ttyS0", 9600)
     i = 0
     while True:
+        print("---m2---")
         i += 1
         time.sleep(0.05)
         result = s.read()
