@@ -31,6 +31,8 @@ class SendCommand:
 
 class MySerial:
     def __init__(self, port, baudrate):
+        print("---m2---")
+
         self.ser = serial.Serial(port, baudrate)
 
     def write(self, cmd):
@@ -54,7 +56,7 @@ class MySerial:
         return ch_r
 
 
-command = SendCommand(0, 1, 2)
+
 
 
 def main():
@@ -62,7 +64,6 @@ def main():
     s = MySerial("/dev/ttyS0", 9600)
     i = 0
     while True:
-        print("---m2---")
         i += 1
         time.sleep(0.05)
         result = s.read()
@@ -100,6 +101,9 @@ def read_key():
         termios.tcsetattr(fd, termios.TCSANOW, old)
     return c
 
+
+
+command = SendCommand(0, 1, 2)
 
 if __name__ == '__main__':
     print("---Started---")
