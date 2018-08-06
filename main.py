@@ -100,6 +100,7 @@ def read_key():
 
 
 if __name__ == '__main__':
+    print("---Started---")
     try:
         thread.start_new_thread(input_thread, ())  # ADDED
         i = 0
