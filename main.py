@@ -58,6 +58,7 @@ command = SendCommand(0, 1, 2)
 
 
 def main():
+    print("---here---")
     s = MySerial("/dev/ttyS0", 9600)
     i = 0
     while True:
@@ -104,7 +105,7 @@ if __name__ == '__main__':
     try:
 
         thread.start_new_thread(input_thread, ())  # ADDED
-        print("---here---")
+
         i = 0
         flag_first_time = True
         while True:  # loop
