@@ -32,8 +32,9 @@ class SendCommand:
 class MySerial:
     def __init__(self, port, baudrate):
         print("---m2---")
-
         self.ser = serial.Serial(port, baudrate)
+        print("---m3---")
+
 
     def write(self, cmd):
         if not cmd == '':
